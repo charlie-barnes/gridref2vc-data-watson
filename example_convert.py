@@ -51,16 +51,21 @@ def vc(grid):
                 except (NameError, KeyError):
                     try:
                         # create a 1km grid reference if we can and test
-                        # we can't create a 1km from a 5km grid reference
+                        # (we can't create a 1km from a 5km grid reference)
                         if len(grid) >= 6 and grid[-2:] not in ('NE', 'NW', 'SE', 'SW'):
                             test = grid[0:2].upper() + grid[2:4] + grid[(len(grid)/2)+1:(len(grid)/2)+3]
                         return data[test]
                     except (NameError, KeyError):  
                         try:
                             # create a 2km grid reference if we can and test
-                            # we can't create a 2km from a 5km grid reference
-                            if len(grid) >= 5 and grid[-2:] not in ('NE', 'NW', 'SE', 'SW'):
+                            # (if we've been given a 2km grid reference then just
+                            # test that)
+                            # (we can't create a 2km from a 5km grid reference)
+                            if len(grid) == 5 and grid[-1:].isalpha():
+                                test = grid
+                            elif len(grid) >= 5 and grid[-2:] not in ('NE', 'NW', 'SE', 'SW'):
                                 test = grid[0:2].upper() + grid[2:3] + grid[(len(grid)/2)+1:(len(grid)/2)+2] + tetrad_suffix[int(grid[3:4])][int(grid[(len(grid)/2)+2:(len(grid)/2)+3])]
+                            
                             return data[test]
                         except (NameError, KeyError):         
                             try:
@@ -73,7 +78,7 @@ def vc(grid):
                                 # grid references.)
                                 if len(grid) >= 4:
                                     # if we've been given a 5km grid reference
-                                    # stip the pentad
+                                    # strip the pentad
                                     if grid[-2:] in ('NE', 'NW', 'SE', 'SW'): 
                                         grid = grid[:-2] 
                                     test = grid[0:2].upper() + grid[2:3] + grid[(len(grid)/2)+1:(len(grid)/2)+2]
