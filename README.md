@@ -1,5 +1,5 @@
 # gridref2vc-data
-Data to convert Ordnance Survey grid references to vice-counties
+Data to convert grid references to vice-counties
 
 This repository contains CSV files that can be used to convert grid references to vice-counties. The data can not be used "as is", via a simple lookup. In order to reduce the size of the data files, a hierarchical system has been implemented whereby if a grid square is entirely within one vice-county, all "child" grid squares are omitted. Thus, in order to retrieve the correct conversion, if the grid square doesn't exist in the data, you need to test the "parent" grid reference.
 
