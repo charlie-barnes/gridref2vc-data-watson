@@ -41,4 +41,4 @@ For working example code on how to use the data, see https://github.com/charlie-
 
 For more information on vice-counties see https://en.wikipedia.org/wiki/Vice-county
 
-The data has been generated from the NBN vice-county boundaries. Contains OS data © Crown copyright and database right 2018.
+The data has been generated from the NBN vice-county boundaries. Contains public sector information licensed under the Open Government Licence v3.0.
