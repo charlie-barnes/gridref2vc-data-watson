@@ -41,4 +41,4 @@ For working example code on how to use the data, see https://github.com/charlie-
 
 For more information on vice-counties see https://en.wikipedia.org/wiki/Vice-county
 
-The data has been generated from the NBN vice-county boundaries. Contains public sector information licensed under the Open Government Licence v3.0.
+The data has been generated from the NBN vice-county boundaries and the dataset of Irish vice-counties produced by SK53 sourced from OpenStreetMap @ https://github.com/SK53/Irish-Vice-Counties. Contains public sector information licensed under the Open Government Licence v3.0.
