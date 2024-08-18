@@ -5,7 +5,7 @@ This repository contains CSV files that can be used to convert grid references t
 
 As an example, grid square TF135384 does not exist in the data files because it's "grandparent" (its "parent", TF13 is also absent) is entirely within vice-county 53. When traversing the hierachy, you must test in the following order 100m > 1km > 2km > 10km > 100km, ignoring the 5km grid square as this does not entirely contain any "child" grid squares.
 
-Psuedocode:
+Pseudocode:
 ```
 input = TF135384
 
